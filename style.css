@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Rectangular outer container */
+.calculator {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border: 1px solid #d0d9e8;
+    box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
+    padding: 2rem 2.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #0a2a44;
+    margin-bottom: 1.8rem;
+    padding-left: 1rem;
+    background: #f0f0f0;        
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin: 1.8rem 0 1rem 0;
+    border-bottom: 2px solid #d4e0f0;
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e3a5f;
+    margin: 1.5rem 0 1rem 0;
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 1.2rem;
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1e3a5f;
+    margin-bottom: 0.2rem;
+}
+
+.field input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #bccbe0;
+    background: #ffffff;
+    transition: 0.1s;
+}
+
+.field input:focus {
+    border-color: #1e6dc7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30,109,199,0.1);
+}
+
+.field input::placeholder {
+    color: #8f9fb5;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #d0ddf0;
+    font-size: 1rem;
+}
+
+.row .label {
+    font-weight: 600;
+    color: #1e3a5f;
+}
+
+.row .value {
+    font-weight: 600;
+    color: #0f3f6f;
+    background: #f0f5ff;
+    padding: 0.2rem 1rem;
+    border: 1px solid #c7d9f0;
+    min-width: 100px;
+    text-align: right;
+}
+
+.total-deductions {
+    background: #e6f0ff;
+    padding: 0.6rem 0;
+    border-bottom: none;
+    margin: 0.5rem 0;
+}
+
+.total-deductions .value {
+    background:  rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.net-salary {
+    text-align: left;
+    margin: 1.5rem 0;
+}
+
+.net-salary h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #0a2a44;
+    text-align: left;
+}
+
+.net-salary .net-amount{
+    font-size: 1.8rem;
+    text-align: right;
+    font-weight: 500;
+    color: #202122;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #969a9f;
+    margin: 1rem 0;
+}
+
+th {
+    color: #102b47;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.7rem 0.3rem;
+    text-align: left;
+    border: 1px solid #c3c7d0;
+    border-bottom:2px solid #c3c7d0 ;
+}
+
+td {
+    padding: 0.6rem 0.3rem;
+    text-align: left;
+    border: 1px solid #c3c7d0;
+    color: #102b47;
+    font-weight: 600;
+}
+
+td:first-child {
+    text-align: left;
+    padding-left: 0.8rem;
+    font-weight: 600;
+}
+
+.note {
+    font-style: 0;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    margin: 1.5rem 0 1rem 0;
+    color: #2f4770;
+    font-size: 0.95rem;
+}
+
+.clear-btn {
+    background: rgb(18, 85, 231);
+    border: 2px solid #1e6dc7;
+    color: #ebedef;
+    font-weight: 500;
+    font-size: 1.0rem;
+    padding: 0.6rem 2.5rem;
+    cursor: pointer;
+    transition: 0.1s;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.clear-btn:hover {
+    background: #1e6dc7;
+    color: white;
+}

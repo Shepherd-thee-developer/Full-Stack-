@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYE Calculator clone - Zambia Revenue Authority</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Paye Calculator</h1>
+
+        <!-- Basic Pay -->
+        <div class="field">
+            <label>Basic Pay</label>
+            <input type="number" id="basicPay" placeholder="Enter Salary" min="0" step="0.01" value="">
+        </div>
+
+        <!-- Allowances  -->
+        <div class="field">
+            <label>Allowances</label>
+            <input type="number" id="allowances1" placeholder="Enter allowances" min="0" step="0.01" value="">
+        </div>
+
+        <!-- Gross / Taxable Pay -->
+        <div class="row">
+            <span class="label">Gross/Taxable Pay</span>
+            <span class="value" id="grossDisplay">k 0.00</span>
+        </div>
+
+        <!-- Statutory Contribution -->
+        <h2>Statutory Contribution</h2>
+        <div class="field">
+            <input type="number" id="allowances2" placeholder="Enter allowances" min="0" step="0.01" value="">
+        </div>
+
+        <!-- NAPSA  -->
+        <div class="row">
+            <span class="label">Napsa 5%</span>
+            <span class="value" id="napsaDisplay">K 0.00</span>
+        </div>
+        <div class="row">
+            <span class="label">National Health Insurance</span>
+            <span class="value" id="nhiDisplay">K 0.00</span>
+        </div>
+
+<hr>
+
+        <div class="row">
+            <span class="label">Total Contributions</span>
+            <span class="value" id="totalContribDisplay">K 0.00</span>
+        </div>
+        <div class="row">
+            <span class="label">Total Tax Deductions</span>
+            <span class="value" id="totalTaxDisplay">K 0.00</span>
+        </div>
+        <div class="row total-deductions">
+            <span class="label">Total Deductions</span>
+            <span class="value" id="totalDeductionsDisplay">K 0.00</span>
+        </div>
+
+
+        <!-- Net Salary -->
+        <div class="net-salary">
+            <h3>Net Salary</h3>
+            <div  class="net-amount" id="netSalaryDisplay"> K 0.00</div>
+        </div>
+
+        <!-- PAYE Tax Table -->
+        <h3>PAYE TAX COMPUTATION BANDS 2026</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tax Bands</th>
+                    <th>Chargeable Income</th>
+                    <th>Tax Rate</th>
+                    <th>Tax Due</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First K5,100.00 @</td>
+                    <td id="band1Charge">0</td>
+                    <td>0%</td>
+                    <td id="band1Tax">0</td>
+                </tr>
+                <tr>
+                    <td>Next K5,100.01 but not exceeding K7,100.00</td>
+                    <td id="band2Charge">0.00</td>
+                    <td>20%</td>
+                    <td id="band2Tax">0.00</td>
+                </tr>
+                <tr>
+                    <td>Next K7,100.01 but not exceeding K9,200.00</td>
+                    <td id="band3Charge">0.00</td>
+                    <td>30%</td>
+                    <td id="band3Tax">0.00</td>
+                </tr>
+                <tr>
+                    <td>K9,200.01 and Above</td>
+                    <td id="band4Charge">0.00</td>
+                    <td>37%</td>
+                    <td id="band4Tax">0.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Note -->
+        <div class="note">
+           Note: Gross pay shows the tax band category used to calculate your tax 
+        </div>
+<hr>
+        <!-- Clear Button -->
+        <button class="clear-btn" id="clearBtn">Clear</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
